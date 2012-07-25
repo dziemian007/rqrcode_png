@@ -1,7 +1,7 @@
 module RQRCodePNG
 
 	class Sequence
-		
+
 		def initialize(qr_code)
 			@qr_code = qr_code
 		end
@@ -15,7 +15,7 @@ module RQRCodePNG
 					if @qr_code.dark?(row, column)
 						yield row, column
 					end
-				end 
+				end
 			end
 
 		end
@@ -28,9 +28,9 @@ module RQRCodePNG
 		end
 
 		#
-		# Returns the border, 1/10 of the img size
+		# Returns the border, 0!
 		def border_width()
-			@border ||= img_size() / 10
+			@border ||= 0
 		end
 
 	end
